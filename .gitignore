@@ -4,3 +4,5 @@ __pycache__/
 informe/*.pdf
 informe/ecuaciones/
 ~$*.docx
+presentacion/*.pdf
+presentacion/ecuaciones/

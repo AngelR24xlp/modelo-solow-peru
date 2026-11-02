@@ -1,4 +1,8 @@
-"""Pruebas de raíz unitaria, quiebre estructural y cointegración."""
+"""Pruebas de raíz unitaria, quiebre estructural y cointegración.
+
+Autor: Angel Marchán Collazos
+Fecha: 10 de octubre de 2026
+"""
 import warnings
 
 import numpy as np

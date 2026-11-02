@@ -1,4 +1,8 @@
-"""Datos trimestrales del BCRP para Perú, 2000-2026."""
+"""Datos trimestrales del BCRP para Perú, 2000-2026.
+
+Autor: Angel Marchán Collazos
+Fecha: 10 de octubre de 2026
+"""
 import json
 from pathlib import Path
 

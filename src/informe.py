@@ -1,5 +1,9 @@
-"""Genera el informe Word a partir de los resultados producidos por main.py."""
-from datetime import date
+"""Genera el informe Word a partir de los resultados producidos por main.py.
+
+Autor: Angel Marchán Collazos
+Fecha: 10 de octubre de 2026
+"""
+from datetime import datetime
 from pathlib import Path
 
 import matplotlib
@@ -11,6 +15,8 @@ from docx.enum.table import WD_TABLE_ALIGNMENT
 from docx.enum.text import WD_ALIGN_PARAGRAPH
 from docx.oxml.ns import qn
 from docx.shared import Cm, Pt, RGBColor
+
+from src import AUTOR, FECHA, FECHA_ISO, INSTITUCION
 
 RAIZ = Path(__file__).resolve().parents[1]
 FIG, TAB = RAIZ / "outputs" / "figuras", RAIZ / "outputs" / "tablas"
@@ -159,9 +165,9 @@ def generar_informe(R, ruta=None):
     d.p("Una extensión robusta del modelo de Solow adaptado con cointegración, VECM, ARDL y validación "
         "fuera de muestra", cursiva=True, centrado=True)
     doc.add_paragraph("\n")
-    d.p("Angel Marchán", negrita=True, centrado=True)
-    d.p("Universidad Nacional Mayor de San Marcos", centrado=True)
-    d.p(f"Lima, {['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'][date.today().month-1]} de {date.today().year}", centrado=True)
+    d.p(AUTOR, negrita=True, centrado=True)
+    d.p(INSTITUCION, centrado=True)
+    d.p(f"Lima, {FECHA}", centrado=True)
     doc.add_paragraph("\n")
     d.p("Informe reescrito a partir del código Python del repositorio modelo-solow-peru. Todas las cifras, "
         "tablas y figuras fueron generadas por main.py con datos del Banco Central de Reserva del Perú (BCRP). "
@@ -568,6 +574,10 @@ def generar_informe(R, ruta=None):
         par.paragraph_format.left_indent = Cm(1)
         par.paragraph_format.first_line_indent = Cm(-1)
 
+    cp = doc.core_properties
+    cp.author = cp.last_modified_by = AUTOR
+    cp.title = "Determinantes del producto y crecimiento económico en el Perú, 2000-2026"
+    cp.created = cp.modified = datetime.fromisoformat(FECHA_ISO)
     ruta.parent.mkdir(parents=True, exist_ok=True)
     doc.save(ruta)
     print(f"Informe guardado en {ruta}")

@@ -1,5 +1,8 @@
 # Modelo de Solow adaptado para el Perú, 2000–2026
 
+**Autor:** Angel Marchán Collazos — Universidad Nacional Mayor de San Marcos  
+**Fecha de elaboración:** 10 de octubre de 2026
+
 Réplica ampliada en Python de **Paredes-Soria et al. (2025)**, *Adapting the Extended Solow Model: The Impact of Output Determinants on Economic Growth in Peru from 2000 to 2022*, Journal of Risk and Financial Management, 18(3), 112 ([doi:10.3390/jrfm18030112](https://doi.org/10.3390/jrfm18030112)).
 
 El modelo estima cómo influyen la **inversión privada**, la **inversión pública** (infraestructura) y la **PEA ocupada** en el **PBI real** del Perú. Usa datos trimestrales del BCRP desde 2000T1 hasta el último trimestre publicado (2026T2) y proyecta el resto de 2026.
@@ -32,16 +35,18 @@ El modelo estima cómo influyen la **inversión privada**, la **inversión públ
 ## Estructura
 
 ```
-main.py              # ejecuta todo el análisis y genera el informe
+main.py              # ejecuta todo el análisis y genera el informe y la presentación
 src/datos.py         # descarga del BCRP, PEA trimestral, retropolación e inventario perpetuo
 src/pruebas.py       # STL, ADF/PP/KPSS/Zivot-Andrews, Bai-Perron, Johansen
 src/modelos.py       # MCO-HAC, DOLS, ARDL, VECM, IRF bootstrap, VAR, Granger, Toda-Yamamoto, pronósticos
 src/informe.py       # informe Word generado a partir de los resultados
+src/presentacion.py  # presentación PowerPoint generada a partir de los resultados
 data/                # JSON originales del BCRP y la base trimestral
 outputs/tablas/      # 22 tablas CSV
 outputs/figuras/     # 7 figuras PNG
 outputs/resultados.json
 informe/Informe_Modelo_Solow_Peru_2000_2026.docx
+presentacion/Presentacion_Modelo_Solow_Peru_2000_2026.pptx
 ```
 
 ## Uso
@@ -50,10 +55,10 @@ informe/Informe_Modelo_Solow_Peru_2000_2026.docx
 pip install -r requirements.txt
 python main.py                # usa los datos guardados en data/
 python main.py --actualizar   # intenta descargar de nuevo las series del BCRP
-python main.py --sin-informe  # solo tablas y figuras
+python main.py --sin-informe  # solo tablas y figuras (sin Word ni PowerPoint)
 ```
 
-Cada vez que se ejecuta, `main.py` vuelve a calcular todas las tablas, figuras y cifras del informe Word.
+Cada vez que se ejecuta, `main.py` vuelve a calcular todas las tablas, figuras y cifras del informe Word y de la presentación PowerPoint.
 
 ## Datos
 
@@ -70,3 +75,7 @@ Cada vez que se ejecuta, `main.py` vuelve a calcular todas las tablas, figuras y
 - **Datos de 2026:** los observados llegan solo hasta 2026T2; 2026T3 y 2026T4 son pronósticos.
 - **Bloqueo del BCRP:** el portal a veces bloquea las descargas automáticas. En ese caso, `--actualizar` usa las copias guardadas en `data/bcrp/`.
 - **Supuestos propios:** las depreciaciones (5 % para el capital privado y 4 % para el público) y las participaciones factoriales usadas en la contabilidad del crecimiento.
+
+## Autoría
+
+Proyecto elaborado por **Angel Marchán Collazos** (UNMSM) el **10 de octubre de 2026**.

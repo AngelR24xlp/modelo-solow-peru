@@ -3,6 +3,9 @@
 Uso:
     python main.py                # usa los datos de data/
     python main.py --actualizar   # vuelve a descargar las series del BCRP
+
+Autor: Angel Marchán Collazos
+Fecha: 10 de octubre de 2026
 """
 import argparse
 import json
@@ -369,9 +372,11 @@ def imprimir(R):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--actualizar", action="store_true")
-    ap.add_argument("--sin-informe", action="store_true", help="No generar el informe Word")
+    ap.add_argument("--sin-informe", action="store_true", help="No generar el informe Word ni la presentación")
     a = ap.parse_args()
     resultados = main(a.actualizar)
     if not a.sin_informe:
         from src.informe import generar_informe
+        from src.presentacion import generar_presentacion
         generar_informe(resultados)
+        generar_presentacion(resultados)

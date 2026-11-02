@@ -1,4 +1,8 @@
-"""Modelos econométricos: modelo de Solow adaptado (Paredes-Soria et al., 2025) y extensiones robustas."""
+"""Modelos econométricos: modelo de Solow adaptado (Paredes-Soria et al., 2025) y extensiones robustas.
+
+Autor: Angel Marchán Collazos
+Fecha: 10 de octubre de 2026
+"""
 import warnings
 
 import numpy as np
