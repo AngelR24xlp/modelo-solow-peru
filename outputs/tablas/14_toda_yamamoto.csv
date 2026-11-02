@@ -1,0 +1,13 @@
+H0,Chi2,gl,p_valor
+I privada no causa a PBI,12.7283,2,0.0026
+I pública no causa a PBI,0.3648,2,0.8336
+PEA ocupada no causa a PBI,2.2829,2,0.3241
+PBI no causa a I privada,0.8596,2,0.6520
+I pública no causa a I privada,0.5003,2,0.7793
+PEA ocupada no causa a I privada,3.0804,2,0.2201
+PBI no causa a I pública,4.6488,2,0.1039
+I privada no causa a I pública,4.3866,2,0.1177
+PEA ocupada no causa a I pública,5.1382,2,0.0824
+PBI no causa a PEA ocupada,1.0891,2,0.5821
+I privada no causa a PEA ocupada,1.3147,2,0.5208
+I pública no causa a PEA ocupada,0.7556,2,0.6865

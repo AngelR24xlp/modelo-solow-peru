@@ -1,0 +1,4 @@
+variable,elasticidad,error_std,z,p_valor
+I privada,0.4866,0.0747,6.5158,0.0000
+I pública,-0.3179,0.0739,-4.3013,0.0000
+PEA ocupada,1.5989,0.1913,8.3561,0.0000

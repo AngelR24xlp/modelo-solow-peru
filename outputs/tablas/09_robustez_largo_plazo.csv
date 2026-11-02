@@ -1,0 +1,9 @@
+especificación,Inversión privada,p Inversión privada,Inversión pública,p Inversión pública,PEA ocupada,p PEA ocupada
+VECM(k=1) con dummies COVID [principal],0.4866,0.0000,-0.3179,0.0000,1.5989,0.0000
+VECM(k=2) con dummies COVID,0.5304,0.0000,-0.3851,0.0000,1.7099,0.0000
+VECM(k=3) con dummies COVID,0.5029,0.0000,-0.4056,0.0000,1.9800,0.0000
+VECM sin PEA retropolada (2001T3-2026T2),0.4849,0.0000,-0.3222,0.0005,1.6203,0.0000
+VECM pre-COVID (2000T1-2019T4),0.1864,0.0000,-0.1250,0.0002,2.2650,0.0000
+MCO dinámicos (DOLS ±2),0.4234,0.0000,-0.1849,0.0004,1.4325,0.0000
+DOLS con tendencia (PTF exógena),0.3982,0.0000,-0.0955,0.0424,0.3546,0.1074
+MCO en niveles (réplica del paper),0.5686,0.0000,-0.0513,0.3375,0.4048,0.2071

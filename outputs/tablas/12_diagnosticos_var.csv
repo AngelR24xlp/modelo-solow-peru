@@ -1,0 +1,8 @@
+prueba,estadístico,p_valor
+Portmanteau ajustada (12 rezagos),194.2180,0.1649
+Normalidad Jarque-Bera multivariada,260.1014,0.0000
+Raíz máxima del polinomio (estabilidad < 1),0.2929,
+ARCH-LM(4) ΔPBI,,0.3601
+ARCH-LM(4) ΔI privada,,0.9988
+ARCH-LM(4) ΔI pública,,0.1853
+ARCH-LM(4) ΔPEA ocupada,,0.4404

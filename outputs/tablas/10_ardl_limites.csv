@@ -1,0 +1,2 @@
+estadístico F,p-valor I(0),p-valor I(1),ECM (y_{t-1}),orden ARDL
+4.3044,0.0037,0.0322,0.0054,"(4, {'lipri_sa': 4, 'lipub_sa': 1, 'll_sa': 1})"

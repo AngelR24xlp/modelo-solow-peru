@@ -1,0 +1,5 @@
+variable,ADF nivel (p),PP nivel (p),KPSS nivel (p),ZA nivel (p),Quiebre ZA,ADF dif. (p),PP dif. (p),KPSS dif. (p),Orden de integración
+ln PBI,0.8502,0.3684,0.0100,0.0441,2013Q1,0.0000,0.0000,0.1000,I(1)
+ln I privada,0.7311,0.3025,0.0100,0.2601,2014Q2,0.0000,0.0000,0.1000,I(1)
+ln I pública,0.7870,0.0011,0.0100,0.8176,2007Q3,0.0000,0.0000,0.1000,I(1)
+ln PEA ocupada,0.0018,0.0011,0.1000,0.0009,2020Q1,0.0000,0.0000,0.1000,I(0)

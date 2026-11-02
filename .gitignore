@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+informe/*.pdf
+informe/ecuaciones/
+~$*.docx

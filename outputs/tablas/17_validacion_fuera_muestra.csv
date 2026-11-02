@@ -1,0 +1,5 @@
+modelo,RMSE (%),MAE (%)
+"ARIMA(1,1,0) con deriva",0.6190,0.4304
+VAR en diferencias,0.6640,0.4864
+Paseo aleatorio con deriva,1.0985,1.0431
+VECM,1.6734,1.4415

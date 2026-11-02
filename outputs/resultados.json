@@ -1,0 +1,453 @@
+{
+  "periodo": "2000Q1-2026Q2",
+  "n_obs": 106,
+  "trimestres_imputados": [
+    "2000Q1",
+    "2000Q2",
+    "2000Q3",
+    "2000Q4",
+    "2001Q1"
+  ],
+  "dummies": [
+    "2020Q2",
+    "2020Q3",
+    "2020Q4"
+  ],
+  "k_ar_diff": 1,
+  "orden_integracion": {
+    "ln PBI": "I(1)",
+    "ln I privada": "I(1)",
+    "ln I pública": "I(1)",
+    "ln PEA ocupada": "I(0)"
+  },
+  "quiebres_bai_perron": [
+    "2004Q1",
+    "2010Q2",
+    "2019Q1"
+  ],
+  "mco": {
+    "r2_aj": 0.9560295997117472,
+    "coef": {
+      "Constante": 2.989855836146802,
+      "Inversión privada": 0.5685687175168617,
+      "Inversión pública": -0.05127224319845525,
+      "PEA ocupada": 0.4048436702887255
+    },
+    "p": {
+      "Constante": 0.11208991677711036,
+      "Inversión privada": 5.197056028511175e-08,
+      "Inversión pública": 0.3375474857277946,
+      "PEA ocupada": 0.20708065285402488
+    },
+    "dw": 0.3221914918091182
+  },
+  "johansen": {
+    "rango": 1,
+    "rango_sin_dummies": 0,
+    "traza0": 63.53511726466389,
+    "vc0": 47.8545,
+    "traza1": 28.785746722244607,
+    "vc1": 29.7961
+  },
+  "vecm": {
+    "lp": {
+      "I privada": {
+        "elasticidad": 0.48656375990922585,
+        "p_valor": 7.229039589162767e-11
+      },
+      "I pública": {
+        "elasticidad": -0.3178963647606283,
+        "p_valor": 1.698078246503698e-05
+      },
+      "PEA ocupada": {
+        "elasticidad": 1.598920471680127,
+        "p_valor": 0.0
+      }
+    },
+    "alfa_pbi": -0.05807791447807751,
+    "p_alfa_pbi": 0.01803629986603572,
+    "vida_media": 11.584751375959055
+  },
+  "crs": {
+    "suma": 0.6572473427931629,
+    "wald": 2.8727556014580315,
+    "p": 0.09009049745742528
+  },
+  "robustez": [
+    {
+      "especificación": "VECM(k=1) con dummies COVID [principal]",
+      "Inversión privada": 0.48656375990922585,
+      "p Inversión privada": 7.229039589162767e-11,
+      "Inversión pública": -0.3178963647606283,
+      "p Inversión pública": 1.698078246503698e-05,
+      "PEA ocupada": 1.598920471680127,
+      "p PEA ocupada": 0.0
+    },
+    {
+      "especificación": "VECM(k=2) con dummies COVID",
+      "Inversión privada": 0.5303530762394775,
+      "p Inversión privada": 1.5654144647214707e-13,
+      "Inversión pública": -0.38513953542074164,
+      "p Inversión pública": 9.131386602412306e-08,
+      "PEA ocupada": 1.7099341273608768,
+      "p PEA ocupada": 0.0
+    },
+    {
+      "especificación": "VECM(k=3) con dummies COVID",
+      "Inversión privada": 0.5028548016106448,
+      "p Inversión privada": 6.209172731530543e-09,
+      "Inversión pública": -0.4055698977234619,
+      "p Inversión pública": 4.38093334031997e-06,
+      "PEA ocupada": 1.9799714885914865,
+      "p PEA ocupada": 0.0
+    },
+    {
+      "especificación": "VECM sin PEA retropolada (2001T3-2026T2)",
+      "Inversión privada": 0.4848909226823996,
+      "p Inversión privada": 7.984659977644526e-08,
+      "Inversión pública": -0.3221869829585609,
+      "p Inversión pública": 0.0004968132423268656,
+      "PEA ocupada": 1.6203415236055734,
+      "p PEA ocupada": 1.887379141862766e-14
+    },
+    {
+      "especificación": "VECM pre-COVID (2000T1-2019T4)",
+      "Inversión privada": 0.18642424151179138,
+      "p Inversión privada": 4.6394123552895294e-05,
+      "Inversión pública": -0.1250019520454358,
+      "p Inversión pública": 0.00016875326205467722,
+      "PEA ocupada": 2.2649886888154627,
+      "p PEA ocupada": 0.0
+    },
+    {
+      "especificación": "MCO dinámicos (DOLS ±2)",
+      "Inversión privada": 0.4233825885233672,
+      "p Inversión privada": 7.162319928233853e-19,
+      "Inversión pública": -0.1849427567366344,
+      "p Inversión pública": 0.0004367850442830792,
+      "PEA ocupada": 1.4324520020459286,
+      "p PEA ocupada": 6.56180070916813e-26
+    },
+    {
+      "especificación": "DOLS con tendencia (PTF exógena)",
+      "Inversión privada": 0.39817728630820404,
+      "p Inversión privada": 1.4488266984148766e-20,
+      "Inversión pública": -0.09549083901987332,
+      "p Inversión pública": 0.042359728756503574,
+      "PEA ocupada": 0.3545608955048321,
+      "p PEA ocupada": 0.10739731886084718
+    },
+    {
+      "especificación": "MCO en niveles (réplica del paper)",
+      "Inversión privada": 0.5685687175168617,
+      "p Inversión privada": 5.197056028511175e-08,
+      "Inversión pública": -0.05127224319845525,
+      "p Inversión pública": 0.3375474857277946,
+      "PEA ocupada": 0.4048436702887255,
+      "p PEA ocupada": 0.20708065285402488
+    }
+  ],
+  "ardl": {
+    "F": 4.304438839082391,
+    "p_inf": 0.0037197203911162324,
+    "p_sup": 0.0321653837173318,
+    "ecm": 0.005367146052211109,
+    "orden": "(4, {'lipri_sa': 4, 'lipub_sa': 1, 'll_sa': 1})"
+  },
+  "var": {
+    "p": 1,
+    "seleccion": {
+      "AIC": 1,
+      "BIC": 0,
+      "HQIC": 0,
+      "FPE": 1
+    }
+  },
+  "diagnosticos": [
+    {
+      "prueba": "Portmanteau ajustada (12 rezagos)",
+      "estadístico": 194.21795485405553,
+      "p_valor": 0.16486673806522148
+    },
+    {
+      "prueba": "Normalidad Jarque-Bera multivariada",
+      "estadístico": 260.1013514040136,
+      "p_valor": 1.2415149675761163e-51
+    },
+    {
+      "prueba": "Raíz máxima del polinomio (estabilidad < 1)",
+      "estadístico": 0.2929136020071607,
+      "p_valor": NaN
+    },
+    {
+      "prueba": "ARCH-LM(4) ΔPBI",
+      "estadístico": NaN,
+      "p_valor": 0.36008197752334986
+    },
+    {
+      "prueba": "ARCH-LM(4) ΔI privada",
+      "estadístico": NaN,
+      "p_valor": 0.9988172118417673
+    },
+    {
+      "prueba": "ARCH-LM(4) ΔI pública",
+      "estadístico": NaN,
+      "p_valor": 0.1852549224161375
+    },
+    {
+      "prueba": "ARCH-LM(4) ΔPEA ocupada",
+      "estadístico": NaN,
+      "p_valor": 0.44041343543300127
+    }
+  ],
+  "granger": [
+    {
+      "H0": "ΔI privada no causa a ΔPBI",
+      "F": 10.652077547438948,
+      "p_valor": 0.0011980364984384218
+    },
+    {
+      "H0": "ΔPBI no causa a ΔI privada",
+      "F": 0.02271982814990963,
+      "p_valor": 0.8802670806588442
+    },
+    {
+      "H0": "ΔI pública no causa a ΔPBI",
+      "F": 1.0882027673354622,
+      "p_valor": 0.2975260355529816
+    },
+    {
+      "H0": "ΔPBI no causa a ΔI pública",
+      "F": 2.909685636534168,
+      "p_valor": 0.0888576600822404
+    },
+    {
+      "H0": "ΔPEA ocupada no causa a ΔPBI",
+      "F": 0.42730628797776266,
+      "p_valor": 0.513704920114472
+    },
+    {
+      "H0": "ΔPBI no causa a ΔPEA ocupada",
+      "F": 0.3627815896393997,
+      "p_valor": 0.5473209452597037
+    }
+  ],
+  "granger4": [
+    {
+      "H0": "ΔI privada no causa a ΔPBI",
+      "F": 5.030028441275571,
+      "p_valor": 0.0006043467954758401
+    },
+    {
+      "H0": "ΔPBI no causa a ΔI privada",
+      "F": 2.0663887832769525,
+      "p_valor": 0.08496398054468714
+    },
+    {
+      "H0": "ΔI pública no causa a ΔPBI",
+      "F": 0.3836202134412249,
+      "p_valor": 0.8203217877486129
+    },
+    {
+      "H0": "ΔPBI no causa a ΔI pública",
+      "F": 1.260902464417861,
+      "p_valor": 0.2852352514172284
+    },
+    {
+      "H0": "ΔPEA ocupada no causa a ΔPBI",
+      "F": 0.12242373967753295,
+      "p_valor": 0.9743872280859741
+    },
+    {
+      "H0": "ΔPBI no causa a ΔPEA ocupada",
+      "F": 0.17696065126415988,
+      "p_valor": 0.950183441896805
+    }
+  ],
+  "toda_yamamoto": [
+    {
+      "H0": "I privada no causa a PBI",
+      "Chi2": 12.728259835602831,
+      "gl": 2,
+      "p_valor": 0.002633261576355729
+    },
+    {
+      "H0": "I pública no causa a PBI",
+      "Chi2": 0.3647695672479948,
+      "gl": 2,
+      "p_valor": 0.8335984213436683
+    },
+    {
+      "H0": "PEA ocupada no causa a PBI",
+      "Chi2": 2.282943936968245,
+      "gl": 2,
+      "p_valor": 0.32408404998295226
+    },
+    {
+      "H0": "PBI no causa a I privada",
+      "Chi2": 0.8596424177739573,
+      "gl": 2,
+      "p_valor": 0.6519994413145682
+    },
+    {
+      "H0": "I pública no causa a I privada",
+      "Chi2": 0.5002743771907864,
+      "gl": 2,
+      "p_valor": 0.7792520307648799
+    },
+    {
+      "H0": "PEA ocupada no causa a I privada",
+      "Chi2": 3.0804470550825034,
+      "gl": 2,
+      "p_valor": 0.22011990161737832
+    },
+    {
+      "H0": "PBI no causa a I pública",
+      "Chi2": 4.648842865770952,
+      "gl": 2,
+      "p_valor": 0.10388757191733693
+    },
+    {
+      "H0": "I privada no causa a I pública",
+      "Chi2": 4.38655703625844,
+      "gl": 2,
+      "p_valor": 0.11768110986077428
+    },
+    {
+      "H0": "PEA ocupada no causa a I pública",
+      "Chi2": 5.138247894732242,
+      "gl": 2,
+      "p_valor": 0.08240426473388525
+    },
+    {
+      "H0": "PBI no causa a PEA ocupada",
+      "Chi2": 1.0891201568336528,
+      "gl": 2,
+      "p_valor": 0.5820611954084596
+    },
+    {
+      "H0": "I privada no causa a PEA ocupada",
+      "Chi2": 1.3146754375279792,
+      "gl": 2,
+      "p_valor": 0.5207836368883199
+    },
+    {
+      "H0": "I pública no causa a PEA ocupada",
+      "Chi2": 0.7555923126071018,
+      "gl": 2,
+      "p_valor": 0.6864890394292997
+    }
+  ],
+  "fevd": {
+    "1": {
+      "PBI": 100.0,
+      "Inversión privada": 0.0,
+      "Inversión pública": 0.0,
+      "PEA ocupada": 0.0
+    },
+    "4": {
+      "PBI": 90.06844548247896,
+      "Inversión privada": 8.796341572584709,
+      "Inversión pública": 0.9775122988203832,
+      "PEA ocupada": 0.15770064611594523
+    },
+    "8": {
+      "PBI": 90.06701476941237,
+      "Inversión privada": 8.797673578421275,
+      "Inversión pública": 0.9775388836100161,
+      "PEA ocupada": 0.15777276855636538
+    },
+    "12": {
+      "PBI": 90.06701466586446,
+      "Inversión privada": 8.797673672789971,
+      "Inversión pública": 0.9775388869697994,
+      "PEA ocupada": 0.157772774375796
+    }
+  },
+  "irf": {
+    "PBI": {
+      "h4": 1.2819950952026122,
+      "h20": 1.2783678643888088,
+      "sig20": true
+    },
+    "Inversión privada": {
+      "h4": 0.7162509285083413,
+      "h20": 0.9792326915964097,
+      "sig20": true
+    },
+    "Inversión pública": {
+      "h4": -0.26150537227489207,
+      "h20": -0.5206776259158513,
+      "sig20": false
+    },
+    "PEA ocupada": {
+      "h4": 0.35445377519630034,
+      "h20": 0.5153441931370428,
+      "sig20": true
+    }
+  },
+  "validacion": [
+    {
+      "modelo": "ARIMA(1,1,0) con deriva",
+      "RMSE (%)": 0.6189571301966131,
+      "MAE (%)": 0.4303550999569872
+    },
+    {
+      "modelo": "VAR en diferencias",
+      "RMSE (%)": 0.6640093457147941,
+      "MAE (%)": 0.4863920634261021
+    },
+    {
+      "modelo": "Paseo aleatorio con deriva",
+      "RMSE (%)": 1.0985077714024734,
+      "MAE (%)": 1.0430896833019787
+    },
+    {
+      "modelo": "VECM",
+      "RMSE (%)": 1.673397419927071,
+      "MAE (%)": 1.4414647884658116
+    }
+  ],
+  "pronostico": {
+    "anio": 2026,
+    "pbi_anual": 625867.8168846819,
+    "crec": 3.3282983132149724,
+    "crec_inf": 1.3757902071327432,
+    "crec_sup": 5.356761084952311,
+    "crec_vecm": 3.9179234358031723,
+    "trimestres": [
+      "2026Q3",
+      "2026Q4"
+    ]
+  },
+  "contabilidad": {
+    "2001-2008": {
+      "aporte_k_pri": 0.8450630234240397,
+      "aporte_k_pub": -0.04195734974960397,
+      "aporte_pea": 1.2084330148480715,
+      "crec_pbi": 5.638641216931606,
+      "ptf": 3.6271025284090985
+    },
+    "2009-2013": {
+      "aporte_k_pri": 2.1904722827676473,
+      "aporte_k_pub": 0.3747143479497623,
+      "aporte_pea": 1.5108295156034828,
+      "crec_pbi": 5.374938848204138,
+      "ptf": 1.2989227018832459
+    },
+    "2014-2019": {
+      "aporte_k_pri": 1.6081352409446037,
+      "aporte_k_pub": 0.32906244676004154,
+      "aporte_pea": 0.6669173119029281,
+      "crec_pbi": 3.0046686420978297,
+      "ptf": 0.4005536424902563
+    },
+    "2020-2025": {
+      "aporte_k_pri": 1.1453354973714536,
+      "aporte_k_pub": 0.2857307484536431,
+      "aporte_pea": 1.3034739015515662,
+      "crec_pbi": 1.7111946187265008,
+      "ptf": -1.023345528650162
+    }
+  }
+}

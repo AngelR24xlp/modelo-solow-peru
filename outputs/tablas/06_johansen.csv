@@ -1,0 +1,5 @@
+H0: rango ≤,Valor propio,Traza,VC traza 5%,Máx. valor propio,VC máx. 5%,Rechaza (traza),Rechaza (máx.)
+0,0.2840,63.5351,47.8545,34.7494,27.5858,True,True
+1,0.1899,28.7857,29.7961,21.9074,21.1314,False,True
+2,0.0575,6.8783,15.4943,6.1568,14.2639,False,False
+3,0.0069,0.7215,3.8415,0.7215,3.8415,False,False
